@@ -7,9 +7,12 @@
 //
 
 #import "SMViewController.h"
+#import "SMLibraryScanner.h"
+
+
 
 @interface SMViewController ()
-
+@property (nonatomic, strong) SMLibraryScanner *libraryScanner;
 @end
 
 @implementation SMViewController
@@ -17,7 +20,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    
+    _libraryScanner = [[SMLibraryScanner alloc]init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +30,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark IBActions
+
+- (IBAction)scanLibraryButtonTouchUpInside:(UIButton*)sender {
+    sender.enabled = NO;
+    [_libraryScanner scanLibraryGroupsBlock:^(NSArray *groups) {
+        NSLog(@"%@", groups);
+        sender.enabled = YES;
+    }];
+}
+
 
 @end

@@ -24,6 +24,8 @@
 		C6A0B8201759561700A6F704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A0B7F81759561700A6F704 /* Foundation.framework */; };
 		C6A0B8281759561700A6F704 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6A0B8261759561700A6F704 /* InfoPlist.strings */; };
 		C6A0B82B1759561700A6F704 /* UploaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B82A1759561700A6F704 /* UploaderTests.m */; };
+		C6A0B83717595DC400A6F704 /* SMLibraryScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B83617595DC400A6F704 /* SMLibraryScanner.m */; };
+		C6A0B8391759606000A6F704 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A0B8381759606000A6F704 /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,9 @@
 		C6A0B8271759561700A6F704 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C6A0B8291759561700A6F704 /* UploaderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploaderTests.h; sourceTree = "<group>"; };
 		C6A0B82A1759561700A6F704 /* UploaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploaderTests.m; sourceTree = "<group>"; };
+		C6A0B83517595DC400A6F704 /* SMLibraryScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMLibraryScanner.h; path = Uploader/SMLibraryScanner.h; sourceTree = "<group>"; };
+		C6A0B83617595DC400A6F704 /* SMLibraryScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMLibraryScanner.m; path = Uploader/SMLibraryScanner.m; sourceTree = "<group>"; };
+		C6A0B8381759606000A6F704 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A0B8391759606000A6F704 /* AssetsLibrary.framework in Frameworks */,
 				C6A0B7F71759561700A6F704 /* UIKit.framework in Frameworks */,
 				C6A0B7F91759561700A6F704 /* Foundation.framework in Frameworks */,
 				C6A0B7FB1759561700A6F704 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +95,7 @@
 		C6A0B7EA1759561700A6F704 = {
 			isa = PBXGroup;
 			children = (
+				C6A0B8381759606000A6F704 /* AssetsLibrary.framework */,
 				C6A0B7FC1759561700A6F704 /* Uploader */,
 				C6A0B8231759561700A6F704 /* UploaderTests */,
 				C6A0B7F51759561700A6F704 /* Frameworks */,
@@ -119,6 +126,7 @@
 		C6A0B7FC1759561700A6F704 /* Uploader */ = {
 			isa = PBXGroup;
 			children = (
+				C6A0B83417595DAA00A6F704 /* Uploader */,
 				C6A0B8051759561700A6F704 /* SMAppDelegate.h */,
 				C6A0B8061759561700A6F704 /* SMAppDelegate.m */,
 				C6A0B80E1759561700A6F704 /* MainStoryboard_iPhone.storyboard */,
@@ -161,6 +169,15 @@
 				C6A0B8261759561700A6F704 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6A0B83417595DAA00A6F704 /* Uploader */ = {
+			isa = PBXGroup;
+			children = (
+				C6A0B83517595DC400A6F704 /* SMLibraryScanner.h */,
+				C6A0B83617595DC400A6F704 /* SMLibraryScanner.m */,
+			);
+			name = Uploader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +295,7 @@
 				C6A0B8031759561700A6F704 /* main.m in Sources */,
 				C6A0B8071759561700A6F704 /* SMAppDelegate.m in Sources */,
 				C6A0B8161759561700A6F704 /* SMViewController.m in Sources */,
+				C6A0B83717595DC400A6F704 /* SMLibraryScanner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
