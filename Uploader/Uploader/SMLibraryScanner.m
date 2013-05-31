@@ -42,19 +42,7 @@ static NSString * kSMLibraryScannerSmile = @"Smile";
     [self.queue addOperationWithBlock:^{
         [self.groups removeAllObjects];
         [self scanAssetGroupsWithCompletionBlock:^{
-            //groupsBlock(self.groups);
-            NSMutableArray *groupInfo = [@[]mutableCopy];
-            for(NSURL *url in self.groups){
-                [self.library groupForURL:url
-                              resultBlock:^(ALAssetsGroup *group) {
-//                                  NSString *infoString = [NSString stringWithFormat:@"%@ %d", [group valueForProperty:ALAssetsGroupPropertyName], [group numberOfAssets]];
-//                                  [groupInfo addObject:infoString];
-                              } failureBlock:^(NSError *error) {
-                                  
-                              }];
-            }
-            
-            
+            groupsBlock(self.groups);
         }];
     }];
 }
@@ -83,17 +71,7 @@ static NSString * kSMLibraryScannerSmile = @"Smile";
                                                 }
                                             }
                                         }
-                                        
-//                                        if([groupName isEqualToString:@"Camera Roll"] ||
-//                                           [groupName isEqualToString:@"Smile"]){
-//                                            [groupsSeen addObject:[[group valueForProperty:ALAssetsGroupPropertyURL] absoluteString]];
-//                                            [self updateGroup:group];
-//                                            return;
-//                                        }
-//                                        else{
-//                                            return;
-//                                        }
-                                    }
+                                }
                                     else{
                                         completion();
                                     }

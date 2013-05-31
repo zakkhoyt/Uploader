@@ -26,6 +26,13 @@
 		C6A0B82B1759561700A6F704 /* UploaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B82A1759561700A6F704 /* UploaderTests.m */; };
 		C6A0B83717595DC400A6F704 /* SMLibraryScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B83617595DC400A6F704 /* SMLibraryScanner.m */; };
 		C6A0B8391759606000A6F704 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A0B8381759606000A6F704 /* AssetsLibrary.framework */; };
+		C6A0B84917596C4300A6F704 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B83E17596C4300A6F704 /* FMDatabase.m */; };
+		C6A0B84A17596C4300A6F704 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B84017596C4300A6F704 /* FMDatabaseAdditions.m */; };
+		C6A0B84B17596C4300A6F704 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B84217596C4300A6F704 /* FMDatabasePool.m */; };
+		C6A0B84C17596C4300A6F704 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B84417596C4300A6F704 /* FMDatabaseQueue.m */; };
+		C6A0B84E17596C4300A6F704 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B84717596C4300A6F704 /* FMResultSet.m */; };
+		C6A0B85217596C6500A6F704 /* SMAssetDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A0B85117596C6500A6F704 /* SMAssetDatabase.m */; };
+		C6A0B85617596F3C00A6F704 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C6A0B85417596F3000A6F704 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +72,20 @@
 		C6A0B83517595DC400A6F704 /* SMLibraryScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMLibraryScanner.h; path = Uploader/SMLibraryScanner.h; sourceTree = "<group>"; };
 		C6A0B83617595DC400A6F704 /* SMLibraryScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMLibraryScanner.m; path = Uploader/SMLibraryScanner.m; sourceTree = "<group>"; };
 		C6A0B8381759606000A6F704 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		C6A0B83D17596C4300A6F704 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		C6A0B83E17596C4300A6F704 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		C6A0B83F17596C4300A6F704 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		C6A0B84017596C4300A6F704 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		C6A0B84117596C4300A6F704 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		C6A0B84217596C4300A6F704 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		C6A0B84317596C4300A6F704 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		C6A0B84417596C4300A6F704 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		C6A0B84617596C4300A6F704 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		C6A0B84717596C4300A6F704 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		C6A0B84817596C4300A6F704 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		C6A0B85017596C6500A6F704 /* SMAssetDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAssetDatabase.h; path = Uploader/SMAssetDatabase.h; sourceTree = "<group>"; };
+		C6A0B85117596C6500A6F704 /* SMAssetDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAssetDatabase.m; path = Uploader/SMAssetDatabase.m; sourceTree = "<group>"; };
+		C6A0B85417596F3000A6F704 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6A0B85617596F3C00A6F704 /* libsqlite3.0.dylib in Frameworks */,
 				C6A0B8391759606000A6F704 /* AssetsLibrary.framework in Frameworks */,
 				C6A0B7F71759561700A6F704 /* UIKit.framework in Frameworks */,
 				C6A0B7F91759561700A6F704 /* Foundation.framework in Frameworks */,
@@ -95,7 +117,7 @@
 		C6A0B7EA1759561700A6F704 = {
 			isa = PBXGroup;
 			children = (
-				C6A0B8381759606000A6F704 /* AssetsLibrary.framework */,
+				C6A0B85417596F3000A6F704 /* libsqlite3.0.dylib */,
 				C6A0B7FC1759561700A6F704 /* Uploader */,
 				C6A0B8231759561700A6F704 /* UploaderTests */,
 				C6A0B7F51759561700A6F704 /* Frameworks */,
@@ -115,6 +137,7 @@
 		C6A0B7F51759561700A6F704 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6A0B8381759606000A6F704 /* AssetsLibrary.framework */,
 				C6A0B7F61759561700A6F704 /* UIKit.framework */,
 				C6A0B7F81759561700A6F704 /* Foundation.framework */,
 				C6A0B7FA1759561700A6F704 /* CoreGraphics.framework */,
@@ -126,6 +149,7 @@
 		C6A0B7FC1759561700A6F704 /* Uploader */ = {
 			isa = PBXGroup;
 			children = (
+				C6A0B83C17596C4300A6F704 /* FMDB */,
 				C6A0B83417595DAA00A6F704 /* Uploader */,
 				C6A0B8051759561700A6F704 /* SMAppDelegate.h */,
 				C6A0B8061759561700A6F704 /* SMAppDelegate.m */,
@@ -176,8 +200,28 @@
 			children = (
 				C6A0B83517595DC400A6F704 /* SMLibraryScanner.h */,
 				C6A0B83617595DC400A6F704 /* SMLibraryScanner.m */,
+				C6A0B85017596C6500A6F704 /* SMAssetDatabase.h */,
+				C6A0B85117596C6500A6F704 /* SMAssetDatabase.m */,
 			);
 			name = Uploader;
+			sourceTree = "<group>";
+		};
+		C6A0B83C17596C4300A6F704 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				C6A0B83D17596C4300A6F704 /* FMDatabase.h */,
+				C6A0B83E17596C4300A6F704 /* FMDatabase.m */,
+				C6A0B83F17596C4300A6F704 /* FMDatabaseAdditions.h */,
+				C6A0B84017596C4300A6F704 /* FMDatabaseAdditions.m */,
+				C6A0B84117596C4300A6F704 /* FMDatabasePool.h */,
+				C6A0B84217596C4300A6F704 /* FMDatabasePool.m */,
+				C6A0B84317596C4300A6F704 /* FMDatabaseQueue.h */,
+				C6A0B84417596C4300A6F704 /* FMDatabaseQueue.m */,
+				C6A0B84617596C4300A6F704 /* FMResultSet.h */,
+				C6A0B84717596C4300A6F704 /* FMResultSet.m */,
+				C6A0B84817596C4300A6F704 /* libsqlite3.dylib */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +340,12 @@
 				C6A0B8071759561700A6F704 /* SMAppDelegate.m in Sources */,
 				C6A0B8161759561700A6F704 /* SMViewController.m in Sources */,
 				C6A0B83717595DC400A6F704 /* SMLibraryScanner.m in Sources */,
+				C6A0B84917596C4300A6F704 /* FMDatabase.m in Sources */,
+				C6A0B84A17596C4300A6F704 /* FMDatabaseAdditions.m in Sources */,
+				C6A0B84B17596C4300A6F704 /* FMDatabasePool.m in Sources */,
+				C6A0B84C17596C4300A6F704 /* FMDatabaseQueue.m in Sources */,
+				C6A0B84E17596C4300A6F704 /* FMResultSet.m in Sources */,
+				C6A0B85217596C6500A6F704 /* SMAssetDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +467,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Uploader/Uploader-Prefix.pch";
 				INFOPLIST_FILE = "Uploader/Uploader-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Uploader/FMDB\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -428,6 +482,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Uploader/Uploader-Prefix.pch";
 				INFOPLIST_FILE = "Uploader/Uploader-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Uploader/FMDB\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
