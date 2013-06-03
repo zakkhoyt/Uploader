@@ -32,13 +32,44 @@
                                     <constraint firstAttribute="height" constant="460" id="G6R-QR-Y3x"/>
                                 </constraints>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcU-fB-ens">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Insert">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="insertButtonTouchUpInside:" destination="2" eventType="touchUpInside" id="s64-5e-6Ir"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFs-tb-uGD">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="query">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="queryButtonTouchUpInside:" destination="2" eventType="touchUpInside" id="DhE-Dq-uD2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CVc-lG-HzA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Gk-Dx-Prv"/>
+                            <constraint firstItem="CVc-lG-HzA" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="78h-mP-6qA"/>
+                            <constraint firstItem="BFs-tb-uGD" firstAttribute="centerX" secondItem="OcU-fB-ens" secondAttribute="centerX" type="default" id="B9W-vW-8nY"/>
                             <constraint firstItem="Za6-6p-BNb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="K5y-H2-eoc"/>
+                            <constraint firstItem="OcU-fB-ens" firstAttribute="top" secondItem="CVc-lG-HzA" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yai-nr-9jw"/>
                             <constraint firstItem="Za6-6p-BNb" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="aJw-O7-Tkk"/>
-                            <constraint firstItem="CVc-lG-HzA" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ivr-dh-F1M"/>
-                            <constraint firstAttribute="bottom" secondItem="CVc-lG-HzA" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="mYe-Mc-eOY"/>
+                            <constraint firstAttribute="trailing" secondItem="OcU-fB-ens" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ano-eA-jKe"/>
+                            <constraint firstItem="BFs-tb-uGD" firstAttribute="top" secondItem="OcU-fB-ens" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oum-af-ay5"/>
+                            <constraint firstItem="OcU-fB-ens" firstAttribute="baseline" secondItem="CVc-lG-HzA" secondAttribute="baseline" type="default" id="q1v-Mq-Jbn"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -53,7 +84,9 @@
         <class className="SMViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SMViewController.h"/>
             <relationships>
-                <relationship kind="action" name="scanLibraryButtonTouchUpInside:"/>
+                <relationship kind="action" name="insertButtonTouchUpInside:"/>
+                <relationship kind="action" name="queryButtonTouchUpInside:"/>
+                <relationship kind="action" name="scanLibraryButtonTouchUpInside:" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

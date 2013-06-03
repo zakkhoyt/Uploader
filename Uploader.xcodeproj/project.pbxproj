@@ -149,14 +149,10 @@
 		C6A0B7FC1759561700A6F704 /* Uploader */ = {
 			isa = PBXGroup;
 			children = (
-				C6A0B83C17596C4300A6F704 /* FMDB */,
+				C6A0B857175CFCE500A6F704 /* Storyboards */,
+				C6A0B858175CFCEE00A6F704 /* Controllers */,
 				C6A0B83417595DAA00A6F704 /* Uploader */,
-				C6A0B8051759561700A6F704 /* SMAppDelegate.h */,
-				C6A0B8061759561700A6F704 /* SMAppDelegate.m */,
-				C6A0B80E1759561700A6F704 /* MainStoryboard_iPhone.storyboard */,
-				C6A0B8111759561700A6F704 /* MainStoryboard_iPad.storyboard */,
-				C6A0B8141759561700A6F704 /* SMViewController.h */,
-				C6A0B8151759561700A6F704 /* SMViewController.m */,
+				C6A0B83C17596C4300A6F704 /* FMDB */,
 				C6A0B7FD1759561700A6F704 /* Supporting Files */,
 			);
 			path = Uploader;
@@ -165,6 +161,8 @@
 		C6A0B7FD1759561700A6F704 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C6A0B8051759561700A6F704 /* SMAppDelegate.h */,
+				C6A0B8061759561700A6F704 /* SMAppDelegate.m */,
 				C6A0B7FE1759561700A6F704 /* Uploader-Info.plist */,
 				C6A0B7FF1759561700A6F704 /* InfoPlist.strings */,
 				C6A0B8021759561700A6F704 /* main.m */,
@@ -222,6 +220,24 @@
 				C6A0B84817596C4300A6F704 /* libsqlite3.dylib */,
 			);
 			path = FMDB;
+			sourceTree = "<group>";
+		};
+		C6A0B857175CFCE500A6F704 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C6A0B80E1759561700A6F704 /* MainStoryboard_iPhone.storyboard */,
+				C6A0B8111759561700A6F704 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		C6A0B858175CFCEE00A6F704 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6A0B8141759561700A6F704 /* SMViewController.h */,
+				C6A0B8151759561700A6F704 /* SMViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

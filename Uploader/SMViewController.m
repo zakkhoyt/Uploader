@@ -8,11 +8,12 @@
 
 #import "SMViewController.h"
 #import "SMLibraryScanner.h"
-
+#import "SMAssetDatabase.h"
 
 
 @interface SMViewController ()
 @property (nonatomic, strong) SMLibraryScanner *libraryScanner;
+@property (nonatomic, strong) SMAssetDatabase *assetDatabase;
 @end
 
 @implementation SMViewController
@@ -23,6 +24,9 @@
 	
     
     _libraryScanner = [[SMLibraryScanner alloc]init];
+    
+    
+    _assetDatabase = [SMAssetDatabase sharedInstance];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,11 +40,17 @@
 
 - (IBAction)scanLibraryButtonTouchUpInside:(UIButton*)sender {
     sender.enabled = NO;
-    [_libraryScanner scanLibraryGroupsBlock:^(NSArray *groups) {
+    [self.libraryScanner scanLibraryGroupsBlock:^(NSArray *groups) {
         NSLog(@"%@", groups);
         sender.enabled = YES;
     }];
 }
+- (IBAction)insertButtonTouchUpInside:(id)sender {
+    [self.assetDatabase test_insert_garbage];
+}
 
+- (IBAction)queryButtonTouchUpInside:(id)sender {
+    [self.assetDatabase test_query_garbage];
+}
 
 @end
