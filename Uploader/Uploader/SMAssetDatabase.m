@@ -152,7 +152,8 @@ __attribute ((unused)) static NSString *kTBAlbumAssetsAssetID = @"asset_id";
     static int offset = 0;
     int x = 0;
     for(x = 0; x < 100; x++){
-        NSString *updateString = [NSString stringWithFormat:@"INSERT OR IGNORE INTO test (id, name) VALUES (%d, 'red')", offset + x];
+        NSString *url = [NSString stringWithFormat:@"URL-%d", offset+x];
+        NSString *updateString = [NSString stringWithFormat:@"INSERT INTO albums (id, name, url) VALUES (%d, 'red', '%@')", offset + x, url];
         BOOL s = [self.database executeUpdate:updateString];
         if(s == NO){
             NSLog(@"**** ERROR: could not update with string %@", updateString);
@@ -171,9 +172,12 @@ __attribute ((unused)) static NSString *kTBAlbumAssetsAssetID = @"asset_id";
     FMResultSet *resultSet = [self.database executeQuery:queryString];
 
     while([resultSet next]){
-        NSString *name = [resultSet stringForColumn:@"name"];
-        NSInteger ident = [resultSet intForColumn:@"id"];
-        NSLog(@"%@=%d", name, ident);
+        NSString *name = [resultSet stringForColumn:kTBAlbumsName];
+        NSString *url = [resultSet stringForColumn:kTBAlbumsURL];
+        NSInteger ident = [resultSet intForColumn:kTBAlbumsID];
+        
+        NSLog(@"name=%@ url=%@ ident=%d", name, url, ident);
+        
     }    
 }
 
