@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SMAssetDatabase : NSObject
-+(SMAssetDatabase *)sharedInstance;
++(SMAssetDatabase*)sharedInstance;
 -(void)test_insert_garbage;
 -(void)test_query_garbage;
 @end

@@ -42,7 +42,7 @@ __attribute ((unused)) static NSString *kTBAlbumAssetsAssetID = @"asset_id";
 @implementation SMAssetDatabase
 
 
-+(SMAssetDatabase *)sharedInstance{
++(SMAssetDatabase*)sharedInstance{
     static SMAssetDatabase *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

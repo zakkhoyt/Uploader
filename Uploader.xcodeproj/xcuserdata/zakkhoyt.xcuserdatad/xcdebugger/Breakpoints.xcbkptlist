@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Uploader/Uploader/SMAssetDatabase.m"
-         timestampString = "391980148.284697"
+         timestampString = "391984601.643704"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "159"
-         endingLineNumber = "159"
+         startingLineNumber = "157"
+         endingLineNumber = "157"
          landmarkName = "-test_insert_garbage"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,12 +86,38 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Uploader/Uploader/SMAssetDatabase.m"
-         timestampString = "391980148.284697"
+         timestampString = "391984601.643704"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "176"
-         endingLineNumber = "176"
+         startingLineNumber = "174"
+         endingLineNumber = "174"
          landmarkName = "-test_query_garbage"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Uploader/SMViewController.m"
+         timestampString = "391996081.837091"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-scanLibraryButtonTouchUpInside:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Uploader/SMViewController.m"
+         timestampString = "391995931.002712"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
+         landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

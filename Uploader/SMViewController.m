@@ -7,13 +7,15 @@
 //
 
 #import "SMViewController.h"
-#import "SMLibraryScanner.h"
+#import "SMAssetLibraryScanner.h"
 #import "SMAssetDatabase.h"
 
 
-@interface SMViewController ()
-@property (nonatomic, strong) SMLibraryScanner *libraryScanner;
+@interface SMViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (nonatomic, strong) SMAssetLibraryScanner *assetLibraryScanner;
 @property (nonatomic, strong) SMAssetDatabase *assetDatabase;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation SMViewController
@@ -23,7 +25,7 @@
     [super viewDidLoad];
 	
     
-    _libraryScanner = [[SMLibraryScanner alloc]init];
+    _assetLibraryScanner = [[SMAssetLibraryScanner alloc]init];
     
     
     _assetDatabase = [SMAssetDatabase sharedInstance];
@@ -36,11 +38,38 @@
 }
 
 
+#pragma mark Implements UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    NSLog(@"%s:%d", __FUNCTION__, __LINE__);
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [UIView animateWithDuration:0.25 animations:^{
+            UIImage *image = [info objectForKey:@"UIImagePickerControllerEditedImage"];
+            if(image == nil){
+                image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+            }
+            self.imageView.image = image;
+        }];
+        
+    }];
+	
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [picker dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    NSLog(@"%s:%d", __FUNCTION__, __LINE__);
+}
+
+
+
 #pragma mark IBActions
 
 - (IBAction)scanLibraryButtonTouchUpInside:(UIButton*)sender {
     sender.enabled = NO;
-    [self.libraryScanner scanLibraryGroupsBlock:^(NSArray *groups) {
+    [self.assetLibraryScanner scanAssetLibraryForGroups:^(NSArray *groups) {
         NSLog(@"%@", groups);
         sender.enabled = YES;
     }];
@@ -52,5 +81,40 @@
 - (IBAction)queryButtonTouchUpInside:(id)sender {
     [self.assetDatabase test_query_garbage];
 }
+
+
+- (IBAction)choosePhotoButtonTouchUpInside:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.allowsEditing = YES;
+	picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:^{
+        NSLog(@"%s:%d", __FUNCTION__, __LINE__);
+    }];
+}
+
+
+- (IBAction)takePhotoButtonTouchUpInside:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.allowsEditing = YES;
+	picker.delegate = self;
+    [self presentViewController:picker animated:YES completion:^{
+        NSLog(@"%s:%d", __FUNCTION__, __LINE__);
+    }];
+}
+
+- (IBAction)savedPhotoButtonTouchUpInside:(id)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    picker.allowsEditing = YES;
+	picker.delegate = self;
+    picker.editing = YES;
+    [self presentViewController:picker animated:YES completion:^{
+        NSLog(@"%s:%d", __FUNCTION__, __LINE__);
+    }];
+}
+
+
 
 @end

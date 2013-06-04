@@ -1,23 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="SMViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXZ-1d-oI2">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Choose">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="choosePhotoButtonTouchUpInside:" destination="2" eventType="touchUpInside" id="x6C-2W-s55"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="fQv-8D-Zoy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" type="user" id="N5J-Rh-BYo"/>
+                                    <constraint firstAttribute="height" constant="497" type="user" id="a2G-Z0-Jdm"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Po-hq-j1v">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="qTH-Zw-7Uv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePhotoButtonTouchUpInside:" destination="2" eventType="touchUpInside" id="JyN-Ul-YiQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeY-Zn-8Sd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="unm-q7-K5e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Saved">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="savedPhotoButtonTouchUpInside:" destination="2" eventType="touchUpInside" id="3Rn-wA-Wh1"/>
+                                    <action selector="takePhotoButtonTouchUpInside:" destination="2" eventType="touchUpInside" id="ILS-YE-YgI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fQv-8D-Zoy" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="user" id="1ZU-tc-fPa"/>
+                            <constraint firstItem="VeY-Zn-8Sd" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="1xL-Ih-lpr"/>
+                            <constraint firstItem="7Po-hq-j1v" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="3PI-8F-o6L"/>
+                            <constraint firstItem="QXZ-1d-oI2" firstAttribute="top" secondItem="3" secondAttribute="top" type="user" id="3ir-xq-u3q"/>
+                            <constraint firstItem="fQv-8D-Zoy" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="user" id="PBu-Tj-Jae"/>
+                            <constraint firstItem="VeY-Zn-8Sd" firstAttribute="centerX" secondItem="fQv-8D-Zoy" secondAttribute="centerX" type="default" id="aOH-Jb-Fh1"/>
+                            <constraint firstItem="fQv-8D-Zoy" firstAttribute="top" secondItem="QXZ-1d-oI2" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="fu2-3c-k5N"/>
+                            <constraint firstItem="fQv-8D-Zoy" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="user" id="gdT-jV-yPg"/>
+                            <constraint firstItem="7Po-hq-j1v" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="iVs-1f-YIR"/>
+                            <constraint firstItem="QXZ-1d-oI2" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="nP3-nh-w1I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="fQv-8D-Zoy" id="y7E-P7-nF7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SMViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SMViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="choosePhotoButtonTouchUpInside:"/>
+                <relationship kind="action" name="insertButtonTouchUpInside:"/>
+                <relationship kind="action" name="queryButtonTouchUpInside:"/>
+                <relationship kind="action" name="savedPhotoButtonTouchUpInside:"/>
+                <relationship kind="action" name="scanLibraryButtonTouchUpInside:" candidateClass="UIButton"/>
+                <relationship kind="action" name="takePhotoButtonTouchUpInside:"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
